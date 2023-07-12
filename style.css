@@ -27,18 +27,6 @@
     margin-bottom: 50px;
 }
 
-.image {
-    border: 5px solid pink;
-    border-radius: 50%;
-    box-shadow: 0 0 10px rgba(255, 0, 0, 0.3);
-    margin-top: 20px;
-    width: 300px;
-    height: 300px;
-    object-fit: cover;
-    max-width: 100%;
-    max-height: 100%;
-}
-
 .heart {
     margin: auto;
     width: 100px;
@@ -81,3 +69,33 @@
     box-shadow: -10px 10px 120px red;
 }
 
+.carousel {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    overflow: hidden;
+
+  }
+  
+  .image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 80%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+
+    border: 5px solid pink;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.3);
+    margin-top: 20px;
+ 
+  }
+  
+  .image.active {
+    opacity: 1;
+  }
+  

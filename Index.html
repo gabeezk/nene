@@ -20,7 +20,18 @@
 
             <div id="hide">
                 <p>Bem-Vinda!!!❤️❤️</p>
-                <img class="image" src="./images/gamara.jpg" alt="Imagem">
+                <div class="carousel">
+                    <img class="image" src="./images/gamara.jpg" alt="Imagem 1">
+                    <img class="image" src="./images/gamara1.jpg" alt="Imagem 2">
+                    <img class="image" src="./images/gamara2.jpg" alt="Imagem 3">
+                    <img class="image" src="./images/gamara3.jpg" alt="Imagem 4">
+                    <img class="image" src="./images/gamara4.jpg" alt="Imagem 5">
+                    <img class="image" src="./images/gamara5.jpg" alt="Imagem 6">
+                    <img class="image" src="./images/gamara6.jpg" alt="Imagem 7">
+                    <img class="image" src="./images/gamara7.jpg" alt="Imagem 8">
+
+                </div>
+
                 <br>
                 <audio controls>
                     <source src="./music/m.wav" type="audio/mpeg">
@@ -44,6 +55,20 @@
                 alert("Senha incorreta. Tente novamente!");
             }
         });
+
+        window.addEventListener("load", function () {
+            const images = document.querySelectorAll(".image");
+            let index = 0;
+
+            function changeImage() {
+                images[index].classList.remove("active");
+                index = (index + 1) % images.length;
+                images[index].classList.add("active");
+            }
+
+            setInterval(changeImage, 3000); // Altera a imagem a cada 3 segundos (3000 ms)
+        });
+
     </script>
 </body>
 
