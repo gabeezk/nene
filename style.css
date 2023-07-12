@@ -1,0 +1,83 @@
+@font-face {
+    font-family: KLCupid;
+    src: url(./fonts/love.ttf);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    /* Ajuste a altura conforme necessário */
+    font-family: KLCupid;
+    margin-bottom: 50px;
+}
+
+.item {
+    margin-bottom: 20px;
+    /* Espaçamento entre os elementos */
+}
+
+#hide {
+    display: none;
+}
+#hideheart {
+    display: none;
+    margin-bottom: 50px;
+}
+
+.image {
+    border: 5px solid pink;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.3);
+    margin-top: 20px;
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.heart {
+    margin: auto;
+    width: 100px;
+    height: 100px;
+    background: red;
+    transform: rotate(-45deg);
+    box-shadow: -10px 10px 120px red;
+    animation: heart 0.6s linear infinite;
+}
+@keyframes heart {
+    0% {
+        transform: rotate(-45deg) scale(1.07);
+    }
+    100% {
+        transform: rotate(-45deg) scale(1.0);
+    }
+    100% {
+        transform: rotate(-45deg) scale(0.8);
+    }
+    
+}
+.heart::before {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background: red;
+    top: -50%;
+    border-radius: 60px;
+    box-shadow: -10px 10px 120px red;
+}
+.heart::after {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background: red;
+    right: -50%;
+    border-radius: 60px;
+    box-shadow: -10px 10px 120px red;
+}
+
